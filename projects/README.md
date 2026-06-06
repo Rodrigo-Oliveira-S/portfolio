@@ -1,19 +1,16 @@
-# bridge-project
+## Projects
 
-Projeto que conecta o processamento em COBOL com a análise moderna de dados, utilizando Python e ferramentas de visualização.
+Projetos práticos de dados — da extração à visualização.
 
-## Objetivo
+## O que você encontra aqui
 
-Desenvolver um pipeline de dados que integre:
-- Programas COBOL para simular processamento legado.
-- Scripts em Python para ETL e carga em banco de dados.
-- Visualização em ferramentas de BI (Metabase, Tableau, Google Sheets).
+- Análises completas com SQL, PostgreSQL e Excel
+- Dashboards e KPIs que respondem perguntas reais de negócio
+- Pipelines e automações
+- Containers e orquestração
 
-## Versões
+## Objetivos
 
-- `v1-android/` — Protótipo inicial desenvolvido no Termux (Android), com saída para Google Sheets.
-- `v2-wsl/` — Versão completa em WSL (Ubuntu) com banco de dados em container e dashboards interativos.
-
-## Status
-
-Em desenvolvimento. Acompanhe as subpastas para mais detalhes.
+- Praticar o dia a dia de um analista de dados
+- Gerar recomendações a partir de dados brutos
+- Construir um portfólio que mostre evolução constante

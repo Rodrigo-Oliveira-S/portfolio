@@ -1,11 +1,12 @@
-## knowledge-base
+## Knowledge Base
 
-Esta pasta contém minha base de conhecimento em diferentes tecnologias. Aqui estão os estudos, exercícios e anotações organizados por assunto.
+Base de conhecimento organizada por tecnologia.
+Aqui estão os fundamentos que sustentam meus projetos práticos.
 
 ## Estrutura
 
-- `COBOL/` — Estudos e exercícios práticos em COBOL.
-- `Python/` — (em breve) Exercícios e projetos em Python.
-- `SQL/` — (em breve) Consultas e modelagem de bancos de dados.
+- SQL — Consultas, fundamentos e boas práticas
+- Python — Scripts para automação e análise (em breve)
+- COBOL — Meu ponto de partida em lógica de programação
 
-Cada subpasta possui seu próprio README com detalhes sobre os conteúdos abordados.
+Cada subpasta possui seu próprio README com detalhes.

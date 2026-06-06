@@ -1,13 +1,14 @@
-## SQL - Estudos e Exercícios
+## SQL - Fundamentos e Consultas
 
-Esta pasta reúne meus estudos e exercícios práticos em SQL, organizados por ordem de aprendizado. 
-Cada subpasta contém scripts e exemplos que exploram conceitos da linguagem.
+Base de conhecimento SQL organizada por nível de aprendizado.
 
-## Objetivo de Estudo
+## Objetivos
 
-Aprender e praticar SQL em diferentes bancos de dados (MySQL, PostgreSQL, SQL Server, DB2), 
-desde consultas básicas até tópicos avançados como joins, subconsultas, otimização e integração com aplicações.
+- Consolidar os comandos que uso nas análises
+- Servir como referência rápida para projetos
+- Evoluir do básico ao avançado com exemplos práticos
 
-## Como os Scripts Estão Organizados
+## Ferramentas
 
-Os scripts são numerados sequencialmente conforme avanço nos estudos. Cada um tem seu próprio README explicando o que foi praticado.
+- PostgreSQL
+- DBeaver

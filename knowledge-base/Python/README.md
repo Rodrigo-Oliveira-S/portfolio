@@ -1,14 +1,18 @@
-## Python - Estudos e Exercícios
+## Python - Scripts e Automações
 
-Esta pasta reúne meus estudos e exercícios práticos em Python, organizados por ordem de aprendizado. 
-Cada subpasta contém um programa que explora conceitos da linguagem.
+Scripts Python para automatizar tarefas de análise e preparação de dados.
 
-## Objetivo de Estudo
+Cada script resolve uma etapa específica do pipeline de dados,
+substituindo tarefas manuais que hoje faço com SQL e Excel.
 
-Desenvolver habilidades em Python com foco em automação, ciência de dados e integração com outras tecnologias. 
-A ideia é construir uma base sólida que permita criar scripts eficientes, analisar dados e conectar sistemas legados (como COBOL) 
-a ferramentas modernas de visualização.
+## Ferramentas (Em breve)
 
-## Como os Programas Estão Organizados
+- pandas
+- sqlalchemy 
+- psycopg2
+- matplotlib
+- openpyxl
 
-Os programas são numerados sequencialmente conforme avanço nos estudos. Cada um tem seu próprio README explicando o que foi praticado.
+---
+
+Scripts em construção — serão adicionados conforme o avanço nos projetos.

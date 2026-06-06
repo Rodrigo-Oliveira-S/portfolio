@@ -1,23 +1,18 @@
-## bridge-project — Versão Android (v1-android)
+## Data Analysis
 
-Esta versão é um protótipo desenvolvido no Termux (Android), utilizando GNUCOBOL, Python e MariaDB. 
-O objetivo é validar a integração entre COBOL (processamento) e Python (ETL) em um ambiente móvel, 
-com saída dos dados para visualização no Google Planilhas.
+Análises de dados com foco em negócio, usando SQL e Excel.
 
-## Tecnologias utilizadas
+Cada projeto segue um fluxo:
 
-- GNUCOBOL (no Termux)
-- Python 3
-- MariaDB
-- Google Sheets (via exportação CSV ou API)
+1. Extração dos dados com SQL (PostgreSQL)
+2. Limpeza e preparação no Excel (Power Query)
+3. Análise exploratória com KPIs
+4. Dashboard final com recomendações
 
-## Estrutura
+## Objetivos
 
-- `cobol/` — Programas COBOL que geram dados (ex: cálculos, relatórios)
-- `python/` — Scripts Python que leem os dados gerados e os carregam no banco ou planilha
-- `data/` — Arquivos CSV temporários (se houver)
-- `docs/` — Anotações e prints de execução
+- Praticar o pipeline completo de análise.
+- Responder perguntas reais de negócio.
+- Gerar recomendações baseadas em dados.
 
-## Como executar
 
-(Detalhes futuros)
