@@ -1,16 +1,20 @@
-## Projects
+# Projects
 
 Projetos práticos de dados — da extração à visualização.
 
-## O que você encontra aqui
+## Análise de Dados:
 
-- Análises completas com SQL, PostgreSQL e Excel
-- Dashboards e KPIs que respondem perguntas reais de negócio
-- Pipelines e automações
+- Análises completas com PostgreSQL e Python
+- Dashboards com Metabase e Excel
+- KPIs que respondem perguntas reais de negócio
+
+## Engenharia de Dados (em breve):
+
+- Pipelines automatizados com Python
 - Containers e orquestração
 
 ## Objetivos
 
 - Praticar o dia a dia de um analista de dados
 - Gerar recomendações a partir de dados brutos
-- Construir um portfólio que mostre evolução constante
+- Evoluir para pipelines e automação
