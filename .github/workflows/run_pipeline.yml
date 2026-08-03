@@ -30,4 +30,5 @@ jobs:
         DB_HOST: ${{ secrets.DB_HOST }}
         DB_PORT: ${{ secrets.DB_PORT }}
       run: |
-        python pipeline.py
+  cd projects/data-analysis/bank-customer-churn-analysis/python
+  python pipeline.py
