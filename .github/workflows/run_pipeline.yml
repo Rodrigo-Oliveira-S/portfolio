@@ -39,6 +39,24 @@ jobs:
       run: |
         pip install pandas sqlalchemy psycopg2-binary python-dotenv
 
+    - name: Importar CSVs para o banco de dados
+      env:
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_HOST: localhost
+        DB_PORT: 5432
+      run: |
+        cd projects/data-analysis/bank-customer-churn-analysis/python
+        python -c "
+        import pandas as pd
+        from database import get_engine
+        engine = get_engine()
+        df1 = pd.read_csv('../raw/bank_churn.csv')
+        df2 = pd.read_csv('../raw/bank_churn_data_dictionary.csv')
+        df1.to_sql('bank_churn', engine, if_exists='replace', index=False)
+        df2.to_sql('bank_churn_data_dictionary', engine, if_exists='replace', index=False)
+        print('Tabelas importadas com sucesso!')
+        "
     - name: Executar o pipeline de dados
       env:
         DB_USER: ${{ secrets.DB_USER }}
