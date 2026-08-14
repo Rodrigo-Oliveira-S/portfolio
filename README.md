@@ -1,20 +1,18 @@
-##  Rodrigo Oliveira Silva
+# Rodrigo Oliveira Silva
 
-##  Apresentação
+## Apresentação
 
-Praticante de análise de dados com foco em construir uma base sólida para engenharia de dados. 
-Trabalho com SQL, Python, Excel e ferramentas de BI para resolver problemas reais. Ambiente diário com Linux e Docker. 
+Analista de dados com foco em construir uma base sólida para Engenharia de Dados. 
+Trabalho com SQL, Python e ferramentas de BI (Excel/Metabase) para resolver problemas reais. 
+Ambiente diário com Linux e containers (Docker/Podman). 
 Conhecimento em finanças aplicado à análise de empresas e ativos do mercado financeiro.
 
+## Objetivos
 
-##  Objetivos
-
-- Praticar análise de dados diariamente com projetos reais.
-- Evoluir para engenharia de dados (próximo passo natural).
-- Consolidar SQL, Python, Excel e Power BI/Tableau.
-- Integrar conhecimento em finanças às análises (ações, criptomoedas, derivativos).
-- Completar a faculdade de ADS com olhar em DevOps (segunda frente).
-
+- Praticar Análise e Engenharia de Dados diariamente através de projetos reais.
+- Consolidar ferramentas: SQL, Python, Docker/Podman, Excel e Metabase.
+- Integrar conhecimento de finanças às análises (ações, criptomoedas, derivativos).
+- Concluir a graduação em ADS com ênfase em DevOps.
 
 ##  Contato
 

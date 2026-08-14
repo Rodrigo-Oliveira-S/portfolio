@@ -1,18 +1,22 @@
-## Python - Scripts e Automações
+# Python — Scripts e Automação
 
-Scripts Python para automatizar tarefas de análise e preparação de dados.
+Scripts Python para automatizar pipelines de análise e preparação de dados, integrando bancos PostgreSQL, validação de qualidade e geração de CSVs.
 
-Cada script resolve uma etapa específica do pipeline de dados,
-substituindo tarefas manuais que hoje faço com SQL e Excel.
+Cada script resolve uma etapa específica do pipeline, substituindo tarefas manuais e garantindo reprodutibilidade.
 
-## Ferramentas (Em breve)
+## Ferramentas utilizadas
 
-- pandas
-- sqlalchemy 
-- psycopg2
-- matplotlib
-- openpyxl
+- **pandas** — Manipulação e transformação de dados
+- **SQLAlchemy** — Conexão e execução de consultas SQL
+- **psycopg2-binary** — Driver PostgreSQL
+- **python-dotenv** — Gestão de variáveis de ambiente
+- **Jupyter Notebook** — Análise exploratória e rascunho de consultas
 
----
+## Scripts disponíveis
 
-Scripts em construção — serão adicionados conforme o avanço nos projetos.
+- **`database.py`** — Conexão modular com PostgreSQL
+- **`queries.py`** — Consultas SQL organizadas por função
+- **`pipeline.py`** — Orquestração completa do fluxo de dados
+- **`quality_checks.py`** — Validação automática de CSVs gerados
+
+
