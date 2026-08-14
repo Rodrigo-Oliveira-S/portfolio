@@ -1,0 +1,75 @@
+name: Executar Pipeline de Dados do Marketing Campaign Results
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:               
+      postgres: 
+        image: postgres:15
+        env:
+          POSTGRES_USER: ${{ secrets.DB_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          POSTGRES_DB: db_marketing_campaign
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:                   
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar as bibliotecas necessárias
+        run: |
+          pip install pandas sqlalchemy psycopg2-binary python-dotenv
+
+      - name: Importar os CSVs para o Banco de Dados
+        env:
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+        run: |
+          cd projects/data-analysis/marketing-campaign-analysis/python
+          python -c "
+          import pandas as pd
+          from database import get_engine
+          engine = get_engine()
+          df1 = pd.read_csv('../raw/marketing_data.csv')
+          df2 = pd.read_csv('../raw/marketing_data_dictionary.csv')
+          df1.to_sql('marketing_data', engine, if_exists='replace', index=False)
+          df2.to_sql('marketing_data_dictionary', engine, if_exists='replace', index=False)
+          print("Todos os CSVs foram importados!")
+
+      - name: Executar o Pipeline de dados
+        env:
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+        run: |
+          cd projects/data-analysis/marketing-campaign-analysis/python
+          python pipeline.py
+
+      - name: Publicar os CSVs no repositório
+        run: |
+          git config --global user.name "Rodrigo Oliveira Silva"
+          git config --global user.email "rodrigooliveirasilva91.2@outlook.com"
+          git add projects/data-analysis/marketing-campaign-analysis/data/*.csv
+          git commit -m "Atualiza CSVs automaticamente [skip ci]" || echo "Nada para commitar"
+          git push
