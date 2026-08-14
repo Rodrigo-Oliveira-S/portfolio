@@ -54,7 +54,7 @@ jobs:
           df2 = pd.read_csv('../raw/marketing_data_dictionary.csv')
           df1.to_sql('marketing_data', engine, if_exists='replace', index=False)
           df2.to_sql('marketing_data_dictionary', engine, if_exists='replace', index=False)
-          print("Todos os CSVs foram importados!")
+          "
 
       - name: Executar o Pipeline de dados
         env:
