@@ -1,0 +1,70 @@
+name: Executar Pipeline de Dados do Global Electronics Retailer
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: ${{ secrets.DB_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          POSTGRES_DB: db_global_eletronics_retailer
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v5
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Instalar as bibliotecas necessárias
+        run: |
+          pip install pandas sqlalchemy psycopg2-binary python-dotenv
+
+      - name: Importar os CSVs para o Banco de Dados
+        env:
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+        run: |
+          cd projects/data-analysis/global-electronics-retailer-analysis/python
+          python data_import.py
+
+      - name: Executar o Pipeline de dados
+        env:
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+        run: |
+          cd projects/data-analysis/global-electronics-retailer-analysis/python
+          python pipeline.py
+
+      - name: Publicar os CSVs no repositório
+        run: |
+          git config --global user.name "Rodrigo Oliveira Silva"
+          git config --global user.email "rodrigooliveirasilva91.2@outlook.com"
+          git add projects/data-analysis/global-electronics-retailer-analysis/data/*.csv
+          git commit -m "Atualiza CSVs automaticamente [skip ci]" || echo "Nada para commitar"
+          git push
