@@ -157,7 +157,8 @@ def margem_desempenho():
         ) as margem
     from "Sales" s
     join "Products" p on p."ProductKey" = s."ProductKey"
-    group by data;
+    group by data
+    order by data asc;
     """
 
 def margem_categoria(mes):
