@@ -13,5 +13,6 @@
         ) as margem
     from "Sales" s
     join "Products" p on p."ProductKey" = s."ProductKey"
-    group by data;
+    group by data
+    order by data asc;
     
