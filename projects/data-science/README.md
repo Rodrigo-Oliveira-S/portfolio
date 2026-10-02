@@ -1,20 +1,19 @@
-## Data Engineering
+# Data Science
 
-Projetos de pipelines, containers e automação de dados.
+Nesta área eu estarei colocando minhas análises de data science, melhorando
+constantemente a minha base estatística, e aprimorando o conhecimento em scikit-learn.
 
-## O que virá para cá
+## Conteúdos
 
-- Pipeline ETL com Python + PostgreSQL
-- Containerização de scripts com Docker/Podman
-- Orquestração de tarefas com Airflow ou Prefect
-- Projetos com dbt, Spark e cloud
+- Análises com camadas de exploração, estatística e Machine Learning
+- Exemplos de gráficos com Matplotlib para visualização dos dados
+- Dashboard com Streamlit para compreensão da análise
+- Perguntas de negócio com sugestões e insights
 
 ## Objetivos
 
-- Automatizar o trabalho que hoje faço manualmente como analista
-- Construir pipelines que rodem 24/7 sem intervenção
-- Evoluir de analista para engenheiro de dados
+- Evoluir constantemente com diversos tipos de dados
+- Crescer na área de ciência de dados
+- Ser um profissional melhor a cada dia
 
 ---
-
-Em breve.
