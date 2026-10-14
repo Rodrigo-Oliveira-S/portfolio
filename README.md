@@ -2,15 +2,14 @@
 
 ## Apresentação
 
-Analista de dados com foco em construir uma base sólida para Engenharia de Dados. 
-Trabalho com SQL, Python e ferramentas de BI (Excel/Metabase) para resolver problemas reais. 
-Ambiente diário com Linux e containers (Docker/Podman). 
-Conhecimento em finanças aplicado à análise de empresas e ativos do mercado financeiro.
+Estudante de Análise e Desenvolvimento de Sistemas, com foco em Ciência de Dados. Tenho experiência prática em projetos de análise de dados, desde a obtenção, tratamento e exploração dos dados até a elaboração de perguntas, análises e dashboards para gerar informações relevantes a partir dos dados. Atualmente, estou aprofundando meus conhecimentos em Estatística e Machine Learning para evoluir minhas análises e desenvolver soluções cada vez mais voltadas para à Ciência de dados.
 
 ## Objetivos
 
-- Praticar Análise e Engenharia de Dados diariamente através de projetos reais.
-- Consolidar ferramentas: SQL, Python, Docker/Podman, Excel e Metabase.
+- Praticar Análise e Ciência de Dados diariamente através de projetos reais.
+- Consolidar conhecimentos como SQL, Docker/Podman, Metabase, e Excel.
+- Melhorar e avançar cada vez em Ciência de Dados, trazendo soluções mais inteligentes.
+- Aprimorar a estatística para uma análise mais cada vez mais acertiva com Machine Learning,
 - Integrar conhecimento de finanças às análises (ações, criptomoedas, derivativos).
 - Concluir a graduação em ADS com ênfase em DevOps.
 
