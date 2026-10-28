@@ -1,0 +1,9 @@
+cat << 'EOF' > data/sample.log
+2026-10-28 10:00:01 INFO [auth] User login successful - ip: 192.168.1.10
+2026-10-28 10:00:05 ERROR [database] Connection timeout to PostgreSQL - status: 500
+2026-10-28 10:01:12 WARNING [api] Resource not found /api/v1/users/999 - status: 404
+2026-10-28 10:02:45 INFO [checkout] Order #1042 processed - status: 200
+2026-10-28 10:03:10 ERROR [auth] Invalid credentials provided - status: 401
+2026-10-28 10:04:00 ERROR [database] Could not execute query - status: 500
+2026-10-28 10:05:15 WARNING [api] Rate limit exceeded for IP 10.0.0.5 - status: 429
+EOF
