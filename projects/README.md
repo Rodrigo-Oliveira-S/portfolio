@@ -1,21 +1,24 @@
 # Projects
 
-Projetos práticos de dados - da extração à visualização.
+Repositório de projetos práticos focados em Desenvolvimento de Software, Banco de Dados, Diagnóstico de Sistemas e Análise de Dados.
 
-## Data Analyst
+## Categorias
 
-- Análises completas com PostgreSQL e Python
-- Dashboards com Metabase e Excel
-- KPIs que respondem perguntas reais de negócio
+### Software & Back-End
+- Desenvolvimento de rotinas e scripts em Python
+- Modelagem, estruturação e consultas em banco de dados relacional (PostgreSQL)
+- Conteinerização de aplicações e ambientes com Podman/Docker
+- Validação de regras de negócio e testes de integração
 
-## Data Science
+### Data Analytics & Business Intelligence
+- Ingestão, limpeza e tratamento de dados operacionais
+- Consultas SQL avançadas para diagnósticos e cruzamento de informações
+- Desenvolvimento de dashboards operacionais e relatórios estratégicos (Metabase e Excel)
 
-- Análises Exploratórias com pandas
-- Uso de Estatística para melhor compreensão dos dados
-- Machine Learning para análises preditivas de alto impacto
+## Padrão de Organização dos Projetos
 
-## Objetivos
-
-- Praticar o dia a dia de um cientista de dados
-- Gerar recomendações a partir de dados brutos
-- Entregar dashboards com as melhores recomendações
+Cada projeto neste repositório possui:
+- Documentação do problema e das regras de negócio
+- Scripts de criação e população de banco de dados
+- Código-fonte em Python para manipulação, automação ou análise
+- Instruções de reprodução do ambiente de desenvolvimento

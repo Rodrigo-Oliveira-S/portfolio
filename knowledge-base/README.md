@@ -1,10 +1,10 @@
 # Knowledge Base
 
-Base de conhecimento organizada por tecnologia. Aqui estão os fundamentos teóricos e práticos que sustentam meus projetos de dados.
+Base de conhecimento organizada por tecnologia. Repositório com anotações, fundamentos teóricos e rotinas práticas sobre linguagens, bancos de dados e ferramentas de software.
 
 ## Estrutura
 
-- **`cobol/`** - Meu ponto de partida em lógica de programação e estruturação de sistemas legados.
-- **`pandas/`** - Notebooks com aprendizados para análises de dados e estatísticas.
-- **`python/`** - Scripts para automação de pipelines, manipulação de dados e integração com bancos.
-- **`sql/`** - Consultas, fundamentos e boas práticas (CTEs, Window Functions, Subconsultas).
+- **`cobol/`** Lógica de programação e conceitos de estruturação em sistemas.
+- **`pandas/`** Manipulação, tratamento e análise exploratória de conjuntos de dados.
+- **`python/`** Scripts para automação, manipulação de arquivos, lógica de programação e integração com bancos de dados.
+- **`sql/`** Consultas, modelagem, funções de agregação, CTEs, Window Functions e manipulação no PostgreSQL.
