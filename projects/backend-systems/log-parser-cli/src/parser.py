@@ -8,7 +8,6 @@ from rich.panel import Panel
 
 console = Console()
 
-# Expressão regular para extrair: Data, Nível, Módulo, Mensagem e Status HTTP
 LOG_PATTERN = re.compile(
     r"(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s+"
     r"(?P<level>INFO|WARNING|ERROR)\s+"
@@ -19,7 +18,7 @@ LOG_PATTERN = re.compile(
 
 def parse_log_file(file_path: str):
     path = Path(file_path)
-    
+
     if not path.is_file():
         console.print(f"[bold red]Erro:[/bold red] O arquivo '{file_path}' não foi encontrado.")
         sys.exit(1)
@@ -35,20 +34,16 @@ def parse_log_file(file_path: str):
                 level = data["level"]
                 status = data["status"]
 
-                # Contabiliza ocorrências por módulo afetado
                 if level in ["ERROR", "WARNING"]:
                     modules_counter[data["module"]] += 1
 
-                # Filtra apenas erros graves (ERROR ou status HTTP 5xx/4xx)
                 if level == "ERROR" or (status and status.startswith(("4", "5"))):
                     data["line_number"] = line_number
                     errors.append(data)
 
-    # Exibição do Painel Resumo
     console.print(Panel.fit("[bold blue]DIAGNÓSTICO DE INCIDENTES - LOG PARSER CLI[/bold blue]"))
     console.print(f"Arquivo analisado: [bold yellow]{path.name}[/bold yellow]\n")
 
-    # Tabela de Detalhes de Erros
     table = Table(title="Ocorrências Críticas Detectadas", show_lines=True)
     table.add_column("Linha", justify="center", style="cyan")
     table.add_column("Data/Hora", style="dim")
@@ -70,7 +65,6 @@ def parse_log_file(file_path: str):
 
     console.print(table)
 
-    # Resumo por Módulo
     console.print("\n[bold]Resumo de Afetados por Módulo:[/bold]")
     for mod, count in modules_counter.items():
         console.print(f" • [cyan]{mod}[/cyan]: {count} falhas")
